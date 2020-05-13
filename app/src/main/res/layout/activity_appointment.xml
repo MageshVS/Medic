@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:id="@+id/page1"
+    tools:context=".Appointment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title="@string/app_name"
+            android:theme="@style/ToolbarColoredBackArrow"
+            app:titleTextColor="#ffffff" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            tools:context=".Appointment">
+
+            <RelativeLayout
+                android:id="@+id/list1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/custom_stroke"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/account" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/image1"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="66dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Doctor Name"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text1"
+                    android:layout_alignStart="@+id/text1"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Additional Details" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:layout_below="@id/list1">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:hint="Name"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nameView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/phoneContainer"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="Phone"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phoneView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/dateDisplay"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/phoneContainer"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/custom_bottom_stroke"
+                    android:padding="7dp"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/timeDisplay"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dateDisplay"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/custom_bottom_stroke"
+                    android:padding="7dp"
+                    android:textAlignment="center"
+                    android:textSize="15dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/problemContainer"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timeDisplay"
+                    android:layout_margin="20dp"
+                    android:hint="Problem"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/problemDisplay"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/problemContainer"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="121dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/submit"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/problemContainer"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/custom_button"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:padding="10dp"
+                        android:text="Continue"
+                        android:textColor="#ffffff"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/dateIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/phoneContainer"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@drawable/custom_icon"
+                    android:src="@drawable/date_icon" />
+
+                <ImageView
+                    android:id="@+id/timeIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/dateIcon"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@drawable/custom_icon"
+                    android:src="@drawable/time_icon" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

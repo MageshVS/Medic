@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".ProfileEditActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ToolbarColoredBackArrow"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:subtitleTextColor="@color/white"
+            app:title="@string/app_name"
+            app:titleTextColor="#ffffff" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/header"
+            app:layout_constraintVertical_bias="0.1">
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="30dp"
+                android:id="@+id/profile_picture"
+                android:src="@drawable/profile_picture"
+                android:contentDescription="TODO" />
+
+            <ImageView
+                android:id="@+id/profile_name_icon"
+                android:layout_width="@dimen/profile_icon_width"
+                android:layout_height="@dimen/profile_icon_height"
+                android:src="@drawable/profile_name"
+                app:layout_constraintTop_toTopOf="@id/nameHint"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="@id/profile_picture"
+                app:layout_constraintTop_toBottomOf="@id/profile_picture"
+                app:layout_constraintBottom_toBottomOf="@id/profileViewName"
+                android:contentDescription="TODO" />
+
+            <TextView
+                android:id="@+id/nameHint"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Name "
+                android:textSize="12dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="12dp"
+                app:layout_constraintStart_toEndOf="@id/profile_name_icon"
+                app:layout_constraintTop_toBottomOf="@id/profile_picture"/>
+           <TextView
+               android:layout_width="220dp"
+               android:layout_height="wrap_content"
+               android:id="@+id/profileViewName"
+               android:layout_marginStart="0dp"
+               android:layout_marginTop="3dp"
+               android:background="@drawable/custom_border_buttom"
+               app:layout_constraintStart_toStartOf="@id/nameHint"
+               app:layout_constraintTop_toBottomOf="@id/nameHint"
+               android:textSize="18dp"
+               android:text="Name" />
+
+            <ImageView
+                android:id="@+id/profile_age_icon"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:src="@drawable/profile_age"
+                app:layout_constraintEnd_toEndOf="@id/profile_name_icon"
+                app:layout_constraintBottom_toBottomOf="@id/profileViewAge"
+                app:layout_constraintTop_toTopOf="@id/Agehint"
+                app:layout_constraintStart_toStartOf="@id/profile_name_icon" />
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/Agehint"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintStart_toEndOf="@id/profile_age_icon"
+                app:layout_constraintTop_toBottomOf="@id/profileViewName"
+                android:textSize="12dp"
+                android:text="Age"/>
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileViewAge"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="@id/Agehint"
+                app:layout_constraintTop_toBottomOf="@id/Agehint"
+                android:textSize="18dp"
+                android:background="@drawable/custom_border_buttom"
+                android:text="Age" />
+
+            <ImageView
+                android:id="@+id/profile_height_icon"
+                android:layout_width="@dimen/profile_icon_width"
+                android:layout_height="@dimen/profile_icon_height"
+                android:src="@drawable/profile_height"
+                app:layout_constraintStart_toEndOf="@id/profile_picture"
+                app:layout_constraintTop_toTopOf="@id/profile_picture"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/heightHint"
+                android:text="Height"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintStart_toEndOf="@id/profile_height_icon"
+                app:layout_constraintTop_toTopOf="@id/profile_height_icon"/>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileViewHeight"
+                app:layout_constraintStart_toStartOf="@id/heightHint"
+                android:layout_marginTop="3dp"
+                app:layout_constraintTop_toBottomOf="@id/heightHint"
+                app:layout_constraintBottom_toBottomOf="@id/profile_height_icon"
+                android:textSize="18dp"
+                android:text="Height"
+                android:background="@drawable/custom_border_buttom" />
+
+            <ImageView
+                android:id="@+id/profile_weight_icon"
+                android:layout_width="@dimen/profile_icon_width"
+                android:layout_height="@dimen/profile_icon_height"
+                android:src="@drawable/profile_weight"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/profile_height_icon"
+                app:layout_constraintTop_toBottomOf="@id/profile_height_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/weightHint"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toEndOf="@id/profile_weight_icon"
+                app:layout_constraintTop_toBottomOf="@id/profileViewHeight"
+                android:text="Weight"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileViewWeight"
+                android:background="@drawable/custom_border_buttom"
+                app:layout_constraintStart_toStartOf="@id/weightHint"
+                app:layout_constraintTop_toBottomOf="@id/weightHint"
+                android:textSize="18dp"
+                android:text="Weight" />
+
+            <ImageView
+                android:id="@+id/profile_phone_icon"
+                android:layout_width="@dimen/profile_icon_width"
+                android:layout_height="@dimen/profile_icon_height"
+                android:src="@drawable/profile_phone"
+                app:layout_constraintBottom_toBottomOf="@id/profileViewPhone"
+                app:layout_constraintEnd_toEndOf="@id/profile_age_icon"
+                app:layout_constraintStart_toStartOf="@id/profile_age_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/phoneHint"
+                android:text="Phone"
+                android:textSize="12dp"
+                app:layout_constraintStart_toStartOf="@id/Agehint"
+                app:layout_constraintTop_toBottomOf="@id/profileViewAge"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileViewPhone"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/custom_border_buttom"
+                app:layout_constraintStart_toStartOf="@id/phoneHint"
+                app:layout_constraintTop_toBottomOf="@id/phoneHint"
+                android:textSize="18dp"
+                android:text="Phone" />
+
+            <ImageView
+                android:id="@+id/profile_dob_icon"
+                android:layout_width="@dimen/profile_icon_width"
+                android:layout_height="@dimen/profile_icon_height"
+                android:src="@drawable/profile_cake"
+                app:layout_constraintBottom_toBottomOf="@id/profileViewDoB"
+                app:layout_constraintStart_toStartOf="@id/profile_phone_icon"
+                app:layout_constraintEnd_toEndOf="@id/profile_phone_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dobHint"
+                android:text="Date Of Birth"
+                android:layout_marginTop="5dp"
+                android:textSize="12dp"
+                app:layout_constraintStart_toStartOf="@id/phoneHint"
+                app:layout_constraintTop_toBottomOf="@id/profileViewPhone"/>
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileViewDoB"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/custom_border_buttom"
+                app:layout_constraintStart_toStartOf="@id/phoneHint"
+                app:layout_constraintTop_toBottomOf="@id/dobHint"
+                android:textSize="18dp"
+                android:text="Date Of Birth" />
+
+            <ImageView
+                android:id="@+id/profile_home_town_icon"
+                android:layout_width="@dimen/profile_icon_width"
+                android:layout_height="@dimen/profile_icon_height"
+                android:src="@drawable/profile_home"
+                app:layout_constraintBottom_toBottomOf="@id/profileViewHomeTown"
+                app:layout_constraintStart_toStartOf="@id/profile_dob_icon"
+                app:layout_constraintEnd_toEndOf="@id/profile_dob_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/hometownHint"
+                android:text="Hometown"
+                android:textSize="12dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@id/dobHint"
+                app:layout_constraintTop_toBottomOf="@id/profileViewDoB"/>
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileViewHomeTown"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/custom_border_buttom"
+                app:layout_constraintStart_toStartOf="@id/hometownHint"
+                app:layout_constraintTop_toBottomOf="@id/hometownHint"
+                android:textSize="18dp"
+                android:text="Hometown" />
+
+            <ImageView
+                android:id="@+id/profile_gender_icon"
+                android:layout_width="@dimen/profile_icon_width"
+                android:layout_height="@dimen/profile_icon_height"
+                android:src="@drawable/profile_gender"
+                app:layout_constraintBottom_toBottomOf="@id/profileViewGender"
+                app:layout_constraintStart_toStartOf="@id/profile_home_town_icon"
+                app:layout_constraintEnd_toEndOf="@id/profile_home_town_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/genderHint"
+                android:text="Gender"
+                android:textSize="12dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@id/hometownHint"
+                app:layout_constraintTop_toBottomOf="@id/profileViewHomeTown"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileViewGender"
+                android:text="gender"
+                android:textSize="18dp"
+                android:background="@drawable/custom_border_buttom"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="@id/genderHint"
+                app:layout_constraintTop_toBottomOf="@id/genderHint"/>
+
+            <ImageView
+                android:layout_width="@dimen/profile_icon_width"
+                android:layout_height="@dimen/profile_icon_height"
+                android:id="@+id/profile_blood_icon"
+                app:layout_constraintStart_toEndOf="@id/profileViewGender"
+                app:layout_constraintTop_toTopOf="@id/profile_gender_icon"
+                app:layout_constraintBottom_toBottomOf="@id/profile_gender_icon"
+                android:src="@drawable/blood"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blood"
+                android:id="@+id/bloodHint"
+                app:layout_constraintStart_toEndOf="@id/profile_blood_icon"
+                app:layout_constraintTop_toTopOf="@id/genderHint"
+                android:textSize="12dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileViewBlood"
+                android:text="Blood"
+                android:textSize="18dp"
+                android:background="@drawable/custom_border_buttom"
+                app:layout_constraintStart_toStartOf="@id/bloodHint"
+                app:layout_constraintTop_toTopOf="@id/profileViewGender"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="182dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_edit_save"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/white"
+                android:background="@drawable/custom_button"
+                app:layout_constraintTop_toBottomOf="@id/profileViewGender"
+                android:text="Edit"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

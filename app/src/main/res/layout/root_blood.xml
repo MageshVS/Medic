@@ -1,0 +1,49 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/hname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Hospital name"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/hdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="date"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/htime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hdate"
+            android:layout_alignParentEnd="true"
+            android:text="Time"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/hblood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hname"
+            android:layout_marginTop="30dp"
+            android:gravity="bottom"
+            android:text="Blood"
+            android:textSize="16dp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

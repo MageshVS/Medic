@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title="@string/app_name"
+            android:theme="@style/ToolbarColoredBackArrow"
+            app:subtitleTextColor="@color/white"
+            app:titleTextColor="#ffffff"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/header"
+            app:layout_constraintVertical_bias="0.1">
+
+            <RelativeLayout
+                android:id="@+id/list1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/appointment" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/image1"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="66dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Set An Appointment"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text1"
+                    android:layout_alignStart="@+id/text1"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Need a Doctor?" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_alignEnd="@+id/text1"
+                    android:layout_alignBottom="@+id/text1"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="-46dp"
+                    android:layout_marginBottom="-11dp"
+                    android:src="@drawable/next" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/list2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/list1">
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/report" />
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/image2"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="66dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Reports"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text3"
+                    android:layout_alignStart="@+id/text3"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="5dp"
+                    android:text="View Your Reports" />
+
+                <ImageView
+                    android:id="@+id/reportClick"
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_alignEnd="@+id/text3"
+                    android:layout_alignBottom="@+id/text3"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="-140dp"
+                    android:layout_marginBottom="-13dp"
+                    android:src="@drawable/next" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/list3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/list1"
+                app:layout_constraintTop_toBottomOf="@id/list2">
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/blood" />
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/image3"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Blood Donations"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text5"
+                    android:layout_alignStart="@+id/text5"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Save a Life" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_alignEnd="@+id/text5"
+                    android:layout_alignBottom="@+id/text5"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="-74dp"
+                    android:layout_marginBottom="-16dp"
+                    android:src="@drawable/next" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/list4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/list1"
+                app:layout_constraintTop_toBottomOf="@id/list3">
+
+                <ImageView
+                    android:id="@+id/image4"
+                    android:layout_width="50dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ambulance" />
+
+                <TextView
+                    android:id="@+id/text6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/image4"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Call An Ambulance"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text6"
+                    android:layout_alignStart="@+id/text6"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Emergency Call" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_alignEnd="@+id/text6"
+                    android:layout_alignBottom="@+id/text6"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="-54dp"
+                    android:layout_marginBottom="-11dp"
+                    android:src="@drawable/next" />
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
