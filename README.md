@@ -2,10 +2,14 @@
 13/05/2020.
 
 # Description.
-
-Medic is an android application developed specifically for hospital needs.
-Authenticating users by their Email ID and phone numbers.
-It includes getting an appointment from a specific doctor, storing patient’s treatment reports and store those results in the cloud(Firebase).
+<div>
+  <ul>
+    <li>Medic is an android application developed specifically for hospital needs.</li>
+    <li>Authenticating users by their Email ID and phone numbers.</li>
+    <li>It includes getting an appointment from a specific doctor</li>
+    <li>storing patient’s treatment reports and store those results in the cloud(Firebase).</li>
+  </ul>
+</div>  
 
 # Tools.
 
