@@ -29,10 +29,16 @@ For Contact - vsmagesh12@gmail.com
 <h3>Home Page</h3>
 </div>
 <div align="center">
-<img src="https://github.com/MageshVS/ToDoList/blob/master/app/src/main/res/drawable/addnote_page.jpg" width="300" height="500">
+<img src="https://github.com/MageshVS/Medic/blob/master/2.jpg" width="300" height="500">
 <h3>Adding Notes</h3>
 </div>
 <div align="center">
-<img src="https://github.com/MageshVS/ToDoList/blob/master/app/src/main/res/drawable/profile_page.jpg" width="300" height="500">
+<img src="https://github.com/MageshVS/Medic/blob/master/3.jpg" width="300" height="500">
+<h3>Profile Page</h3>
+<div align="center">
+<img src="https://github.com/MageshVS/Medic/blob/master/4.jpg" width="300" height="500">
+<h3>Profile Page</h3>
+<div align="center">
+<img src="https://github.com/MageshVS/Medic/blob/master/5.jpg" width="300" height="500">
 <h3>Profile Page</h3>
 </div>
