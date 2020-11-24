@@ -25,7 +25,7 @@ For Contact - vsmagesh12@gmail.com
 # Screenshots.
 
 <div align="center">
-<img src="https://github.com/MageshVS/Medic/blob/master/Screenshot_2020-03-05-01-18-52-98.jpg" width="300" height="500" >
+<img src="https://github.com/MageshVS/Medic/blob/master/1.jpg" width="300" height="500" >
 <h3>Home Page</h3>
 </div>
 <div align="center">
